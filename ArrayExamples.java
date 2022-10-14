@@ -33,9 +33,14 @@ public class ArrayExamples {
       if(num < lowest) { lowest = num; }
     }
     double sum = 0;
+    boolean alreadyRemoved = false;
     for(double num: arr) {
-      if(num != lowest) { sum += num; }
+      if(num != lowest|| alreadyRemoved == true) { sum += num; }
+      if(num == lowest) {
+        alreadyRemoved = true;
+      }
     }
+
     return sum / (arr.length - 1);
   }
 
