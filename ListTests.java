@@ -30,8 +30,5 @@ public class ListTests {
         expected.add("emily");
         StringChecker sc = new Checking();
         assertEquals(expected, ListExamples.filter(newList, sc)); 
-        
     }
-
-
 }
